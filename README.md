@@ -77,6 +77,18 @@ Any questions taken from external references are referenced [below](#references)
 
 - To contribute, please read our [Contributing Guidelines](CONTRIBUTING.md). For any fixes, updates or new additions, please make a pull-request (PR). Thank you!
 
+### Documentation quality
+
+Run the repository-relative Markdown link check before opening a documentation pull request:
+
+```powershell
+./scripts/Test-MarkdownLinks.ps1
+```
+
+The check intentionally ignores external URLs and heading-only anchors. It catches local links that no longer resolve after a page is moved or renamed, and runs automatically for pull requests and pushes to `main`.
+
+For the Markdown rules that this repository relies on, see GitHub Engineering's [formal specification of GitHub Flavored Markdown](https://github.blog/engineering/user-experience/a-formal-spec-for-github-markdown/).
+
 ## DevOps 🛠
 
 ### :small_blue_diamond: Linux
